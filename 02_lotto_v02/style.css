@@ -1,0 +1,58 @@
+html {
+  font-size: 32px;
+}
+.container {
+  width: 350px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .lotto {
+  text-align: center;
+}
+.container .lotto h3{
+  margin-top: 20px;
+}
+.container .lotto .numbers {
+  width: 450px;
+  height: 60px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.container .lotto .numbers .eachnum {
+  font-size: .75em;
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+  border-radius: 25px;
+  border: 1px solid black;
+  color: white;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .lotto button {
+  margin-top: 20px;
+  font-size: .5em;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: salmon;
+  cursor: pointer;
+  transition: font-size .3s;
+}
+.container .lotto button:hover {
+  font-size: .6em;
+  width: 105px;
+  height: 42px;
+}
