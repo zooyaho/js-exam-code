@@ -1,0 +1,129 @@
+body {
+  font-size: 20px;
+  background-color: #fff;
+  /* background: url(./img/poppies-gcb15505a4_1280.jpg) center -0px no-repeat; */
+  /* background: url(./img/forsythia-gecab8a34d_1280.jpg) center -0px no-repeat; */
+  background: url(./img/shinyocean.jpeg) center -0px no-repeat;
+  background-size: cover;
+}
+.phone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  width: 300px;
+  height: 600px;
+  border: 15px solid #000;
+  background-color: rgb(230, 230, 230);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 4%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #000;
+}
+.box .speaker {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35px;
+  height: 7px;
+  border-radius: 10px;
+  background-color: rgb(79, 79, 79);
+}
+.box .camera {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgb(79, 79, 79);
+}
+.txt-contain {
+  position: relative;
+  width: 80%;
+  height: 60%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.txt-contain .top_section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgb(201, 205, 205);
+
+}
+.txt-contain .top_section .btn-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.txt-contain .top_section .btn-wrap .btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.txt-contain .top_section .btn-wrap .red {
+  background-color: red;
+  margin-left: 8px;
+}
+.txt-contain .top_section .btn-wrap .orange {
+  background-color: orange;
+}
+.txt-contain .top_section .btn-wrap .green {
+  background-color: green;
+}
+.txt-contain .top_section .title {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.txt-contain .txt-wrap {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.txt-wrap a {
+  text-decoration: none;
+  color: black;
+  margin-top: 5px;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+.txt-wrap a:hover {
+  color: blue;
+  text-decoration: underline;
+}
