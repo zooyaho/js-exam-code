@@ -30,8 +30,6 @@ i {
   width: 300px;
   height: 600px;
   border: 15px solid #000;
-  /* background-color: rgb(230, 230, 230); */
-  /* background-color: rgb(183, 200, 230); */
   background-color: #fff;
   border-radius: 40px;
   display: inline-flex;
@@ -73,7 +71,7 @@ i {
 /* TOP SECTION */
 .top-con {
   width: 100%;
-  height: 25%;
+  height: 130px;
 }
 .top-wrap {
   width: 100%;
@@ -84,33 +82,13 @@ button {
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
-.top-con i {
-  font-size: 20px;
-  color: #777;
-}
-.top-con .top-wrap .btn-wrap .btn.delete {
-  padding: 5px 5px 5px 10px;
-}
-.top-con .top-wrap .btn-wrap .btn.write {
-  display: inline-block;
-  padding: 5px 10px 5px 5px;
-}
-.top-con .top-wrap .btn-wrap .btn:hover i {
-  font-size: 25px;
-}
-.top-con .btn.back {
-  margin-right: 240px;
-}
-.top-con .btn.back .material-icons {
-  color: #000;
-}
 .top-con h1 {
   position: absolute;
   display: inline;
   font-size: 30px;
-  top: 20px;
+  top: 0px;
   width: 65%;
-  margin-top: 70px;
+  margin-top: 60px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -120,15 +98,72 @@ button {
   border-radius: 45%;
 }
 
+/* WRITE SECTION */
+.write-con {
+  position: relative;
+  margin-top: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.write-con .wtite-wrap .flatpickr i {
+  position: absolute;
+  font-size: 23px;
+}
+.write-con .wtite-wrap .flatpickr i:first-child {
+  left: 13%;
+}
+.write-con .wtite-wrap .flatpickr i:last-child {
+  top: 6.5px;
+  right: 26%;
+  font-size: 15px;
+}
+.write-con .wtite-wrap .flatpickr .dateSelector {
+  margin-left: 5px;
+  width: 150px;
+  height: 25px;
+  padding-left: 10px;
+}
+.write-con .wtite-wrap .content {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  padding-bottom: 65px;
+}
+.write-con .wtite-wrap .content i {
+  position: absolute;
+  top: 19px;
+  left: 2px;
+  font-size: 20px;
+}
+.write-con .wtite-wrap .content textarea {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  width: 190px;
+  font-size: 18px;
+  padding: 5px;
+}
+.write-con .wtite-wrap .content button {
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  width: 30px;
+  height:30px;
+  font-size: 22px;
+  padding: 0;
+}
+
 /* TodoList SECTION */
 .toDoList-con {
   position: absolute;
-  top: 25%;
+  top: 40%;
   left: 0;
   right: 0;
   bottom: 0;
   overflow: scroll;
-  
   height: auto;
   margin: 0 10px 10px;
 }
@@ -193,7 +228,6 @@ button {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  /* background-color: rgb(97, 141, 224); */
   background-color: rgb(106, 188, 201);
   display: none;
 }
@@ -212,73 +246,18 @@ button {
   text-decoration: line-through;
 }
 
-/*  */
-.write-con {
-  position: relative;
-  margin-top: 30px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.write-con .wtite-wrap {
-  /* width: 100%; */
-}
-.write-con .wtite-wrap .flatpickr {
-  
-}
-.write-con .wtite-wrap .flatpickr i {
+/* FLOATING BTN */
+.floating-btn {
   position: absolute;
-  font-size: 23px;
-}
-.write-con .wtite-wrap .flatpickr i:first-child {
-  left: 13%;
-}
-.write-con .wtite-wrap .flatpickr i:last-child {
-  top: 6.5px;
-  right: 26%;
-  font-size: 15px;
-}
-.write-con .wtite-wrap .flatpickr .dateSelector {
-  margin-left: 5px;
-  width: 150px;
-  height: 25px;
-  padding-left: 10px;
-}
-.write-con .wtite-wrap .content {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  /* height: 50%; */
-  /* background-color: pink; */
-  padding-bottom: 65px;
-}
-.write-con .wtite-wrap .content p {
-  margin-top: 35px;
-  margin-bottom: 15px;
-  font-size: 20px;
-  font-weight: bold;
-  color: rgb(79, 79, 79);
-}
-.write-con .wtite-wrap .content textarea {
-  margin-top: -10px;
-  width: 219px;
-  font-size: 18px;
-  padding: 10px;
-}
-.write-con .wtite-wrap .content button {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  width: 85px;
-  height: 45px;
-  font-size: 17px;
+  right: 25px;
+  bottom: 30px;
+  background-color: rgb(45, 97, 175);
   color: #fff;
-  background-color:rgb(45, 97, 175);
-  border-radius: 45%;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 1px 1px 4px #000;
 }
-.write-con .wtite-wrap .content button:hover {
-  box-shadow: 1px 1px 6px #000;
+.floating-btn .material-icons {
+  font-size: 33px;
+  vertical-align: bottom;
 }

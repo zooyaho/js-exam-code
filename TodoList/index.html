@@ -15,7 +15,10 @@
   <link rel="stylesheet" href="./style.css">
 
   <!-- JS -->
-  <!-- <script defer src="./script.js"></script> -->
+  <script defer src="./script.js"></script>
+  <!-- FLATPICKR -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
   <!-- s: phone -->
@@ -27,19 +30,26 @@
 
     <section class="top-con">
       <div class="top-wrap">
-
-        <!-- s: btn-wrap -->
-        <div class="btn-wrap">
-          <button class="btn delete">
-            <i>🗑</i>
-          </button>
-          <a class="btn write" href="write.html">
-            <i>📝</i>
-          </a>
-        </div>
-        <!-- e: btn-wrap -->
-
         <h1>Todo List</h1>
+      </div>
+    </section>
+
+    <section class="write-con">
+      <div class="wtite-wrap">
+        <!-- s: flatpickr -->
+        <div class="flatpickr">
+          <i>🗓</i>
+          <input type="text" class="dateSelector" placeholder="Select Date" data-input> 
+          <!-- <span class="material-icons">clear</span> -->
+          <i>❌</i>
+        </div>
+        <!-- e: flatpickr -->
+        <div class="content">
+          <i>✏️</i>
+          <!-- <input type="text" name="" id="content" placeholder=""> -->
+          <textarea cols="30" rows="1"></textarea>
+          <button class="btn-add">➕</button>
+        </div>
       </div>
     </section>
 
@@ -66,29 +76,12 @@
           </li>
         </ul>
       </div>
-      <div class="toDoList-Wrap">
-        <div class="date">
-          <p>2022년 4월 22일</p>
-        </div>
-        <ul>
-          <li>
-            <input type="checkbox" name="list" id="1">
-            <label for="1">
-              <div><div></div></div>
-              <span>방 청소하기</span>
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" name="list" id="2">
-            <label for="2">
-              <div><div></div></div>
-              <span>마트 장보기</span>
-            </label>
-          </li>
-        </ul>
-      </div>
     </section>
     <!-- e: TodoList -->
+
+    <div class="floating-btn">
+      <span class="material-icons">delete_outline</span>
+    </div>
 
     
   </div>
