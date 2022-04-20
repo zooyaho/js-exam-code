@@ -1,0 +1,284 @@
+body {
+  font-size: 18px;
+  /* background: url(../img/poppies-gcb15505a4_1280.jpg) center -0px no-repeat; */
+  background: url(../img/forsythia-gecab8a34d_1280.jpg) center -0px no-repeat;
+  /* background: url(../img/shinyocean.jpeg) center -0px no-repeat; */
+  background-size: cover;
+}
+@media (max-width: 1189px){
+  body {
+    background-size: auto;
+  }
+}
+i {
+  font-style: normal;
+}
+.top-con .top-wrap .btn-wrap {
+  position: absolute;
+  top: 45px;
+  right: 15px;
+}
+
+/* PHONE */
+.phone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  width: 300px;
+  height: 600px;
+  border: 15px solid #000;
+  /* background-color: rgb(230, 230, 230); */
+  /* background-color: rgb(183, 200, 230); */
+  background-color: #fff;
+  border-radius: 40px;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 4%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #000;
+}
+.box .speaker {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35px;
+  height: 7px;
+  border-radius: 10px;
+  background-color: rgb(79, 79, 79);
+}
+.box .camera {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgb(79, 79, 79);
+}
+
+/* TOP SECTION */
+.top-con {
+  width: 100%;
+  height: 25%;
+}
+.top-wrap {
+  width: 100%;
+  height: 100%;
+}
+button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.top-con i {
+  font-size: 20px;
+  color: #777;
+}
+.top-con .top-wrap .btn-wrap .btn.delete {
+  padding: 5px 5px 5px 10px;
+}
+.top-con .top-wrap .btn-wrap .btn.write {
+  display: inline-block;
+  padding: 5px 10px 5px 5px;
+}
+.top-con .top-wrap .btn-wrap .btn:hover i {
+  font-size: 25px;
+}
+.top-con .btn.back {
+  margin-right: 240px;
+}
+.top-con .btn.back .material-icons {
+  color: #000;
+}
+.top-con h1 {
+  position: absolute;
+  display: inline;
+  font-size: 30px;
+  top: 20px;
+  width: 65%;
+  margin-top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: rgb(106, 107, 109);
+  border: 4px solid rgb(45, 97, 175);
+  border-top: 7px;
+  border-radius: 45%;
+}
+
+/* TodoList SECTION */
+.toDoList-con {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  
+  height: auto;
+  margin: 0 10px 10px;
+}
+/* scroll 기능은 살리고 안보임 */
+.toDoList-con::-webkit-scrollbar{ display:none; }
+.toDoList-con .toDoList-Wrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+.toDoList-con .toDoList-Wrap:first-child {
+  margin-top: 0px;
+}
+.toDoList-con .toDoList-Wrap .date {
+  width: 100%;
+}
+.toDoList-con .toDoList-Wrap .date p {
+  line-height: 0em;
+  margin-left: 8px;
+  font-weight: bold;
+}
+.toDoList-con .toDoList-Wrap ul {
+  width: 99%;
+  background-color: #fff;
+  /* border: 1px solid #999; */
+  border: 3px solid rgb(45, 97, 175);
+  border-radius: 10px;
+  margin: 0px;
+  padding: 5px 0px 0px;
+  list-style: none;
+}
+.toDoList-con .toDoList-Wrap ul li {
+  margin: 10px 0px;
+  padding-left: 10px;
+}
+.toDoList-con .toDoList-Wrap ul li input[type=checkbox] {
+  display: none;
+}
+.toDoList-con .toDoList-Wrap ul li label {
+  position: relative;
+  margin-left: 5px;
+  height: 100%;
+  cursor: pointer;
+}
+.toDoList-con .toDoList-Wrap ul li label > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 1px solid #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toDoList-con .toDoList-Wrap ul li label > div > div {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  /* background-color: rgb(97, 141, 224); */
+  background-color: rgb(106, 188, 201);
+  display: none;
+}
+.toDoList-con .toDoList-Wrap ul li label span {
+  width: auto;
+  height: auto;
+  line-height: 1.4em;
+  margin-left: 30px;
+  vertical-align:text-top;
+}
+/* 체크된 상태 */
+.toDoList-con .toDoList-Wrap ul li input[type=checkbox]:checked + label > div > div {
+  display: block;
+}
+.toDoList-con .toDoList-Wrap ul li input[type=checkbox]:checked + label span {
+  text-decoration: line-through;
+}
+
+/*  */
+.write-con {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.write-con .wtite-wrap {
+  /* width: 100%; */
+}
+.write-con .wtite-wrap .flatpickr {
+  
+}
+.write-con .wtite-wrap .flatpickr i {
+  position: absolute;
+  font-size: 23px;
+}
+.write-con .wtite-wrap .flatpickr i:first-child {
+  left: 13%;
+}
+.write-con .wtite-wrap .flatpickr i:last-child {
+  top: 6.5px;
+  right: 26%;
+  font-size: 15px;
+}
+.write-con .wtite-wrap .flatpickr .dateSelector {
+  margin-left: 5px;
+  width: 150px;
+  height: 25px;
+  padding-left: 10px;
+}
+.write-con .wtite-wrap .content {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  /* height: 50%; */
+  /* background-color: pink; */
+  padding-bottom: 65px;
+}
+.write-con .wtite-wrap .content p {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(79, 79, 79);
+}
+.write-con .wtite-wrap .content textarea {
+  margin-top: -10px;
+  width: 219px;
+  font-size: 18px;
+  padding: 10px;
+}
+.write-con .wtite-wrap .content button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 85px;
+  height: 45px;
+  font-size: 17px;
+  color: #fff;
+  background-color:rgb(45, 97, 175);
+  border-radius: 45%;
+}
+.write-con .wtite-wrap .content button:hover {
+  box-shadow: 1px 1px 6px #000;
+}

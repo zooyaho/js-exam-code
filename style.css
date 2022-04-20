@@ -6,6 +6,12 @@ body {
   background: url(./img/shinyocean.jpeg) center -0px no-repeat;
   background-size: cover;
 }
+@media (max-width: 1189px){
+  body {
+    background-size: auto;
+  }
+}
+
 .phone {
   position: absolute;
   top: 0;
