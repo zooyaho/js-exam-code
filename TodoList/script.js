@@ -49,6 +49,7 @@ function addList() {
 
   $toDoListWrap[wrapNum].style.display = 'block'; // toDoListWrap 보임
   $toDoListUl[wrapNum].innerHTML += addListHtml;
+  document.querySelector('textarea').value = '';
 }
 
 // [FN] 선택한 리스 날짜에 해당하는 리스트 삭제
@@ -72,8 +73,8 @@ function deleteList() {
   // toDoList-Wrap이 비어있을 경우 삭제
   if($checkedList.length == count) {
     $toDoListContain.removeChild($emptyWrap);
+    count = 0; // reset
   }
-
 }
 
 // [EVENT] 추가 버튼에 클릭이벤트 등록
@@ -85,9 +86,4 @@ document.querySelector('.btn-add').addEventListener('click', function(){
 // [EVENT] 삭제 버튼에 클릭이벤트 등록
 document.querySelector('.floating-btn').addEventListener('click', function(){
   deleteList();
-});
-
-// [EVENT] 날짜 선택 reset
-document.querySelector('.clear').addEventListener('click', function(){
-  dateClear();
 });
