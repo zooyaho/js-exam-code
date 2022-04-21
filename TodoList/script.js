@@ -5,12 +5,12 @@ let $toDoListWrap;
 let $toDoListUl;
 
 let selectDate; // 선택한 날짜
+let writeValue; // 추가할 할일
 let addWrapHtml;
 let addlistHtml;
-let writeValue; // 추가할 할일
 
 let inputId = 0;
-let wrapNum = 0; // 임의로 둔거, 0으로 바꿀 예정
+let wrapNum = -1; // 임의로 둔거, 0으로 바꿀 예정
 
 $dateSelector.flatpickr({
   dataFormat: "Y-m-d",
@@ -40,8 +40,8 @@ $dateSelector.flatpickr({
   },
 });
 
-// 선택한 날짜에 할일 리스트 추가
-function addList(selectDate) {
+// [FN] 선택한 날짜에 할일 리스트 추가
+function addList() {
   writeValue = document.querySelector('textarea').value;
   addListHtml = "<li><input type='checkbox' name='list' id=" + inputId +"><label for="+ inputId +"><div><div></div></div><span>" +  writeValue + "</span></label></li>";
   $toDoListUl = document.querySelectorAll('.toDoList-Wrap ul');
@@ -49,25 +49,45 @@ function addList(selectDate) {
 
   $toDoListWrap[wrapNum].style.display = 'block'; // toDoListWrap 보임
   $toDoListUl[wrapNum].innerHTML += addListHtml;
+}
 
+// [FN] 선택한 리스 날짜에 해당하는 리스트 삭제
+function deleteList() {
+  let $checkedList = document.querySelectorAll('input[type="checkbox"]:checked');
+  console.log($checkedList);
+  let $deleteLi; // 삭제할 li 요소
+  let $emptyUl; // 빈 목록
+  let $emptyWrap; 
+  let count = 0;
+
+  for(let i=0; i < $checkedList.length; i++) {
+    $deleteLi = $checkedList[i].parentNode;
+
+    $emptyUl = $deleteLi.parentElement;
+    $emptyUl.removeChild($deleteLi);
+    count++;
+  }
+
+  $emptyWrap = $emptyUl.parentElement;
+  // toDoList-Wrap이 비어있을 경우 삭제
+  if($checkedList.length == count) {
+    $toDoListContain.removeChild($emptyWrap);
+  }
 
 }
 
-// 선택한 리스 날짜에 해당하는 리스트 삭제
-function deleteLiest(selectDate) {
-  console.log('연결 완료');
-  console.log('click after Select Date: ',selectDate);
-}
-
-// add버튼에 클릭이벤트 등록
+// [EVENT] 추가 버튼에 클릭이벤트 등록
 document.querySelector('.btn-add').addEventListener('click', function(){
-  addList(selectDate);
+  addList();
   inputId++;
 });
 
+// [EVENT] 삭제 버튼에 클릭이벤트 등록
 document.querySelector('.floating-btn').addEventListener('click', function(){
-  deleteList(selectDate);
+  deleteList();
 });
 
-
-
+// [EVENT] 날짜 선택 reset
+document.querySelector('.clear').addEventListener('click', function(){
+  dateClear();
+});

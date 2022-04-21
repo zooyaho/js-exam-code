@@ -110,17 +110,12 @@ button {
   position: absolute;
   font-size: 23px;
 }
-.write-con .wtite-wrap .flatpickr i:first-child {
+.write-con .wtite-wrap .flatpickr i {
   left: 13%;
 }
-.write-con .wtite-wrap .flatpickr i:last-child {
-  top: 6.5px;
-  right: 26%;
-  font-size: 15px;
-}
 .write-con .wtite-wrap .flatpickr .dateSelector {
-  margin-left: 5px;
-  width: 150px;
+  margin-left: 0px;
+  width: 135px;
   height: 25px;
   padding-left: 10px;
 }
@@ -135,42 +130,43 @@ button {
 .write-con .wtite-wrap .content i {
   position: absolute;
   top: 19px;
-  left: 2px;
+  left: 10px;
   font-size: 20px;
 }
 .write-con .wtite-wrap .content textarea {
   position: absolute;
   top: 15px;
-  left: 30px;
-  width: 190px;
-  font-size: 18px;
+  left: 45px;
+  width: 140px;
+  font-size: 17px;
   padding: 5px;
 }
 .write-con .wtite-wrap .content button {
   position: absolute;
-  top: 17px;
-  right: 10px;
-  width: 30px;
-  height:30px;
-  font-size: 22px;
+  top: 22px;
+  right: 2px;
+  width: 40px;
+  height: 33px;
+  font-size: 28px;
   padding: 0;
 }
 
 /* TodoList SECTION */
 .toDoList-con {
   position: absolute;
+  width: 280px;
   top: 40%;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 0;
   overflow: scroll;
   height: auto;
-  margin: 0 10px 10px;
+  margin: 0 0 10px;
 }
 /* scroll 기능은 살리고 안보임 */
 .toDoList-con::-webkit-scrollbar{ display:none; }
 .toDoList-con .toDoList-Wrap {
-  width: 100%;
+  width: 98%;
   height: auto;
   display: flex;
   flex-direction: column;
