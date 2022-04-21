@@ -5,32 +5,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calulator</title>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
   <link rel="stylesheet" href="./style.css">
+
   <script defer src="./script.js"></script>
 </head>
 <body>
-  <div class="calculator">
-    <form name="forms">
-      <input type="text" name="output" readonly />
-      <input type="button" class="clear" value="C" onclick="document.forms.output.value = '' "/>
-      <input type="button" class="operator" value="/" onclick="document.forms.output.value += '/' "/>
-      <input type="button" value="1" onclick="document.forms.output.value += '1' "/>
-      <input type="button" value="2" onclick="document.forms.output.value += '2' "/>
-      <input type="button" value="3" onclick="document.forms.output.value += '3' "/>
-      <input type="button" class="operator" value="*" onclick="document.forms.output.value += '*' "/>
-      <input type="button" value="4" onclick="document.forms.output.value += '4' "/>
-      <input type="button" value="5" onclick="document.forms.output.value += '5' "/>
-      <input type="button" value="6" onclick="document.forms.output.value += '6' "/>
-      <input type="button" class="operator" value="+" onclick="document.forms.output.value += '+' "/>
-      <input type="button" value="7" onclick="document.forms.output.value += '7' "/>
-      <input type="button" value="8" onclick="document.forms.output.value += '8' "/>
-      <input type="button" value="9" onclick="document.forms.output.value += '9' "/>
-      <input type="button" class="operator" value="-" onclick="document.forms.output.value += '-' "/>
-      <input type="button" class="dot" value="." onclick="document.forms.output.value += '.' "/>
-      <input type="button" value="0" onclick="document.forms.output.value += '0' "/>
-      <input type="button" class="operator result" value="=" onclick="document.forms.output.value = eval(document.forms.output.value) "/>
-    </form>
+  <div class="phone">
+    <div class="box">
+      <div class="speaker"></div>
+      <div class="camera"></div>
+    </div>
+    <div class="calculator">
+      <textarea readonly name="output" id="output" cols="30" rows="10">0</textarea>
+      <div class="wrap">
+        <button class="clear">C</button>
+        <button class="operator division">%</button>
+        <button class="num seven">7</button>
+        <button class="num eight">8</button>
+        <button class="num nine">9</button>
+        <button class="operator multiply">x</button>
+        <button class="num four">4</button>
+        <button class="num five">5</button>
+        <button class="num six">6</button>
+        <button class="operator subtract">ㅡ</button>
+        <button class="num one">1</button>
+        <button class="num two">2</button>
+        <button class="num three">3</button>
+        <button class="operator add">+</button>
+        <button class="num zero">0</button>
+        <button class="operator dot">.</button>
+        <button class="operator result">=</button>
+      </div>
+    </div>
+   
+    
   </div>
+  
 </body>
 </html>
